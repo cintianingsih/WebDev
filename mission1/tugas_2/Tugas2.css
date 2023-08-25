@@ -68,7 +68,7 @@ h1 {
     font-size: 4.8vw;
     font-weight: lighter;
     padding: 2vw 12vw 3vw 12vw;
-    justify-content: center;
+    /* justify-content: center; */
     text-align: center;
     color: #38404F;
 }
@@ -76,7 +76,7 @@ h1 {
 h4{
     font-size: 1.6vw;
     color: #778298;
-    justify-content: center;
+    /* justify-content: center; */
     font-family: sans-serif;
     font-weight: lighter;
     padding : 2vw 21vw 3vw 21vw;
@@ -87,11 +87,17 @@ h4{
 }
 
 .home{
-    margin: auto;
+    margin: 0px;
+    padding: 0px;
+    /* height: 1000px; */
+    /* background-color: pink; */
+    justify-content: center;
+    position: relative;
 }
 
 form {
     height: 50px;
+    width: 500px;
     /* width: 500px; */
     border-radius: 5px;
     margin: 0px 350px 0px 350px;
