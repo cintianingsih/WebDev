@@ -1,0 +1,68 @@
+.navigasi{
+    background: rgb(243,244,246);
+}
+
+.home{
+    height: 800px;
+    background: rgb(243,244,246);
+    /* padding: 80px 170px 0px 170px; */
+}
+
+.home h1{
+    font-family: "Palatino Linotype", serif; 
+    color: #38404F;
+    font-size: 4.8vw;
+    padding: 4vw 12vw 3vw 12vw;
+}
+
+.home h4{
+    font-size: 1.7vw;
+    color: #778298;
+    font-family: sans-serif;
+    padding : 2vw 19vw 2vw 19vw;
+    line-height: 1.65;
+}
+
+.home h3{
+    font-size: 1.7vw;
+    color: #778298;
+    font-family: sans-serif;
+    color:  #091836;;
+}
+
+form {
+    height: 4vw;
+    width: 46vw;
+    border-radius: 5px;
+    /* margin: 0vw 27.5vw 0vw 27.5vw; */
+    background-color: #fff;
+    display: flex;
+}
+
+form input {
+    border-radius: 5px 0px 0px 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    outline: none;
+    padding: 1vw;
+    width: 100%;
+    font-size: 1.5vw;
+}
+
+form button{
+    background: #65D777;;
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    height: 4vw;
+    width: 11.3vw;
+    cursor: pointer;
+    font-size: 1.5vw;
+    color: white;
+    padding: 0.3vw;
+}
+
+.formulir{
+    padding: 0vw 26.4vw 5.3vw 26.4vw;
+}
+
