@@ -30,6 +30,14 @@
     color:  #091836;;
 }
 
+.home p{
+    font-size: 1.3vw;
+    color: #778298;
+    font-family: sans-serif;
+    padding: 0vw 3vw 0vw 3vw;
+    text-align: center;
+}
+
 form {
     height: 4vw;
     width: 46vw;
