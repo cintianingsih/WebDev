@@ -9,14 +9,14 @@
 }
 
 .home h1{
-    font-family: "Palatino Linotype", serif; 
+    font-family: Georgia, "Palatino Linotype", serif; 
     color: #38404F;
-    font-size: 4.8vw;
-    padding: 4vw 12vw 3vw 12vw;
+    font-size: 4.9vw;
+    padding: 4.2vw 12vw 3vw 12vw;
 }
 
 .home h4{
-    font-size: 1.7vw;
+    font-size: 1.6vw;
     color: #778298;
     font-family: sans-serif;
     padding : 2vw 19vw 2vw 19vw;
@@ -24,17 +24,17 @@
 }
 
 .home h3{
-    font-size: 1.7vw;
+    font-size: 23px;
     color: #778298;
     font-family: sans-serif;
     color:  #091836;;
 }
 
 .home p{
-    font-size: 1.3vw;
+    font-size: 16px;
     color: #778298;
     font-family: sans-serif;
-    padding: 0vw 3vw 0vw 3vw;
+    padding: 0vw 2vw 0vw 2vw;
     text-align: center;
 }
 
@@ -74,3 +74,70 @@ form button{
     padding: 0vw 26.4vw 5.3vw 26.4vw;
 }
 
+/* main */
+
+.personalData{
+    height: 700px;
+    background: white;
+    margin: 4vw;
+}
+
+.personalData h2{
+    font-size: 50px;
+    text-align: center;
+    padding-top: 53px;
+    font-family: Georgia, "Palatino Linotype", serif; 
+    font-weight: bold;
+    color: #091836;;
+}
+
+.personalData a{
+    color: red;
+    text-align: center;
+    padding-top: 9px;
+    padding-bottom: 50px;
+}
+
+.personalData a:hover {
+    color: #DE3F1C;
+    text-decoration: underline;
+}
+
+.personalData p{
+    color: #778298;;
+    padding-left: 35px;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 14.6px;
+    font-family: sans-serif;
+    
+}
+
+.personalData h3{
+    color:  #091836;;
+    text-align: start;
+    /* padding-top: 20px; */
+    padding-left: 35px;
+    font-size: 23px;
+    font-family: sans-serif;
+}
+
+.barisAkhir{
+    height: 800px;
+}
+
+.email{
+    margin-left: 325px;
+    margin-right: 325px;
+    height: 180px;
+    background: #F3F4F6;
+}
+
+.email h5{
+    font-size: 20px;
+    color: #091836;
+    font-weight: bold;
+    padding: 40px 0px 0px 30px;
+    /* padding-top: 40px;
+    padding-left: 30px; */
+}
