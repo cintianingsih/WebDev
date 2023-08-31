@@ -1,15 +1,14 @@
-[
+{
+  "products": [
     {
-      "nama": "Produk 1",
-      "harga": 100000,
-      "deskripsi": "Deskripsi produk 1",
-      "gambar": "doraemon.jpg"
+      "photo": "doraemon.jpg",
+      "name": "Product 1",
+      "price": 30.000
     },
     {
-      "nama": "Produk 2",
-      "harga": 150000,
-      "deskripsi": "Deskripsi produk 2",
-      "gambar": "dorami.png"
+      "photo": "dorami.png",
+      "name": "Product 2",
+      "price": 30.000
     }
   ]
-  
+}
