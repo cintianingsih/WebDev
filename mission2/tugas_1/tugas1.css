@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.products{
+    text-align: center;
+    width: 65%;
+    border-right: 1px solid pink;
+}
+
+.cart{
+    text-align: center;
+    width: 40%;
+}
