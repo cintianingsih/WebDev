@@ -1,14 +1,32 @@
-{
-  "products": [
+[
     {
-      "photo": "doraemon.jpg",
-      "name": "Product 1",
-      "price": 30.000
+        "name": "Somethinc Ombrella-Crush",
+        "price": 47.000,
+        "image": "ombrella-crush.jpg"
     },
     {
-      "photo": "dorami.png",
-      "name": "Product 2",
-      "price": 30.000
+        "name": "Somethinc Ombrella-Wucu",
+        "price": 47.000,
+        "image": "ombrella-wucu.jpg"
+    },
+    {
+        "name": "Somethinc Air Blush-Flamingo",
+        "price": 53.000,
+        "image": "airyblush-flamingo.jpg"
+    },
+    {
+        "name": "Somethinc Air Blush-Moisella",
+        "price": 53.000,
+        "image": "airyblush-moiselle.jpg"
+    },
+    {
+        "name": "Somethinc Hooman Cushion-Bijoux",
+        "price": 151.000,
+        "image": "hoomancushion-bijoux.jpg"
+    },
+    {
+        "name": "Somethinc Brow Emblem-Dark Chocolate",
+        "price": 58.000,
+        "image": "brow-darkchoco.jpg"
     }
-  ]
-}
+]
