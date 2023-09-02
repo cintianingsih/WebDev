@@ -1,0 +1,110 @@
+body{
+    background-color: white;
+}
+
+.container{
+    background-color: #FFE5E5;
+    border-radius: 20px;
+}
+.container h1 {
+    font-size: 40px;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #874356;
+    letter-spacing: 1.5px;
+    text-shadow: -3px -3px 1px white;
+}
+
+.container h2{
+    font-size: 38px;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #874356;
+    letter-spacing: 1.5px;
+    text-shadow: -3px -3px 1px white;
+}
+
+.container p{
+    color: black;
+}
+
+.items{
+    padding: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding-bottom: 100px;
+}
+
+.items > div {
+    background-color: white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    box-shadow: 0px 0px 10px #874356; 
+    border-radius: 10px 10px 10px 10px; 
+}
+
+.items h3{
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 17px;
+    color: #874356;
+}
+
+
+.items p{
+    text-align: left;
+    padding-left: 20px;
+    font-size: 15px;
+    /* color: #F68989; */
+    /* color: black; */
+}
+
+.decrement-quantity{
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: #874356;
+    border: none;
+    height: 30px;
+    width: 35px;
+    border-radius: 5px;
+}
+
+.increment-quantity{
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: #874356;
+    border: none;
+    height: 30px;
+    width: 35px;
+    border-radius: 5px;
+}
+
+.add-to-cart{
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #FFE5E5;
+    color: #874356;
+    border: 1px solid #874356;
+    height: 30px;
+    width: 130px;
+    border-radius: 5px;
+}
+
+.kuantitas{
+    text-align: center;
+    color: #874356;
+    border: 1px solid #874356;
+    height: 30px;
+    width: 50px;
+    border-radius: 5px;
+}

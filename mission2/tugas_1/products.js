@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let cartTotal = 0;
 
     // Function to add items to the cart
-    function addToCart(name, price, quantity) {
+    function addToCart(name, price, quantity, imageUrl) {
         const existingItem = cartItems.find((item) => item.name === name);
 
         if (existingItem) {
             existingItem.quantity += quantity;
             existingItem.totalPrice += price * quantity;
         } else {
-            cartItems.push({ name, price, quantity, totalPrice: price * quantity });
+            cartItems.push({ name, price, quantity, totalPrice: price * quantity, imageUrl});
         }
 
         cartTotal += price * quantity;
@@ -29,15 +29,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Update the HTML
         updateCart(cartTax, cartSubTotal);
+        updateCartProductImage(imageUrl);
+    }
+
+    function updateCartProductImage(imageUrl) {
+        const productImage = document.getElementById("cart-product-image");
+        productImage.src = imageUrl; 
     }
 
     // Function to update the cart's HTML
     function updateCart(cartTax, cartSubTotal) {
         cart.innerHTML = cartItems
             .map((cartItem) => {
+                const itemTotalPrice = cartItem.price * cartItem.quantity;
                 return `
                     <li>
-                        <span>${cartItem.name} x ${cartItem.quantity} Rp. ${cartItem.price.toFixed(3)}</span>
+                        <div>
+                            <img src="${cartItem.imageUrl}" alt="${cartItem.name}" style="width: 50px; height: 50px;">
+                        </div>
+                        <div>
+                            <span>${cartItem.name} x${cartItem.quantity} Rp. ${cartItem.price.toFixed(3)} = Rp. ${itemTotalPrice.toFixed(3)}</span>
+                        </div>
                     </li>
                 `;
             })
@@ -57,13 +69,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 const itemElement = document.createElement("div");
                 itemElement.classList.add("item");
                 itemElement.innerHTML = `
+                    <img src="${itemData.image}" alt="${itemData.name}" style="width: 150px; height: 150px; border-radius: 10px">
                     <h3>${itemData.name}</h3>
-                    <p>Price: Rp.${itemData.price.toFixed(3)}</p>
-                    <img src="${itemData.image}" alt="${itemData.name}" style="width: 100px; height: 100px;">
-                    <button class="decrement-quantity" data-name="${itemData.name}" data-price="${itemData.price}">-</button>
-                    <input type="number" id="quantity-${itemData.name}" value="0" min="0" style="width: 20px; height: 17px;">
-                    <button class="increment-quantity" data-name="${itemData.name}" data-price="${itemData.price}">+</button>
-                    <button class="add-to-cart" data-name="${itemData.name}" data-price="${itemData.price}">Add to Cart</button>
+                    <p>Rp. ${itemData.price.toFixed(3)}</p>
+                    <button class="decrement-quantity" data-name="${itemData.name}"data-price="${itemData.price}">-</button>
+                    <input class="kuantitas" type="number" id="quantity-${itemData.name}" value="0" min="0">
+                    <button class="increment-quantity" data-name="${itemData.name}" data-price="${itemData.price}">+</button><br>
+                    <button class="add-to-cart" data-name="${itemData.name}" data-price="${itemData.price}">Tambah Barang</button>
                 `;
                 itemsContainer.appendChild(itemElement);
 
@@ -93,8 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     const quantityInput = document.getElementById(`quantity-${name}`);
                     const quantity = parseInt(quantityInput.value);
                     if (quantity > 0) {
-                        addToCart(name, price, quantity);
-                        quantityInput.value = "0"; // Reset quantity input to 0
+                        quantityInput.value = "0";
+                        addToCart(name, price, quantity, itemData.image);
                     }
                 });
             });
