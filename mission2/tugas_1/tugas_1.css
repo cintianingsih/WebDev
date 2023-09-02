@@ -28,8 +28,26 @@ body{
     text-shadow: -3px -3px 1px white;
 }
 
-.container p{
+.mycart{
+    padding-bottom: 50px;
+}
+
+.mycart p{
     color: black;
+    text-align: right;
+    margin-right: 200px;
+}
+
+.cetakStruk{
+    margin-left: 50px;
+    margin-top: 50px;
+    height: 50px;
+    width: 150px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    background-color: #874356;
+    font-size: 20px;
 }
 
 .items{
@@ -62,8 +80,6 @@ body{
     text-align: left;
     padding-left: 20px;
     font-size: 15px;
-    /* color: #F68989; */
-    /* color: black; */
 }
 
 .decrement-quantity{
@@ -107,4 +123,11 @@ body{
     height: 30px;
     width: 50px;
     border-radius: 5px;
+}
+
+#cart li img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 5px;
 }

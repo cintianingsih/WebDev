@@ -16,25 +16,22 @@ document.addEventListener("DOMContentLoaded", function () {
             existingItem.quantity += quantity;
             existingItem.totalPrice += price * quantity;
         } else {
-            cartItems.push({ name, price, quantity, totalPrice: price * quantity, imageUrl});
+            cartItems.push({ name, price, quantity, totalPrice: price * quantity, imageUrl });
         }
 
         cartTotal += price * quantity;
 
-        // Calculate tax (11% of the cart total)
         const cartTax = 0.11 * cartTotal;
 
-        // Calculate sub-total (cart total + tax)
         const cartSubTotal = cartTotal + cartTax;
 
-        // Update the HTML
         updateCart(cartTax, cartSubTotal);
         updateCartProductImage(imageUrl);
     }
 
     function updateCartProductImage(imageUrl) {
         const productImage = document.getElementById("cart-product-image");
-        productImage.src = imageUrl; 
+        productImage.src = imageUrl;
     }
 
     // Function to update the cart's HTML
@@ -44,11 +41,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 const itemTotalPrice = cartItem.price * cartItem.quantity;
                 return `
                     <li>
-                        <div>
-                            <img src="${cartItem.imageUrl}" alt="${cartItem.name}" style="width: 50px; height: 50px;">
-                        </div>
-                        <div>
-                            <span>${cartItem.name} x${cartItem.quantity} Rp. ${cartItem.price.toFixed(3)} = Rp. ${itemTotalPrice.toFixed(3)}</span>
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="${cartItem.imageUrl}" alt="${cartItem.name}">
+                            </div>
+                            <div class="col-11">
+                            <div class="row row-cols-1">
+                                <div class="col" style="padding-left: 30px; padding-top: 25px;color: #874356"><span>${cartItem.name}</span></div>
+                                <div class="row row-cols-2">
+                                    <div class="col" style="padding-left: 30px"><span>Rp. ${cartItem.price.toFixed(3)} x ${cartItem.quantity}</span></div>
+                                    <div class="col" style="padding-left: 200px"><span>Rp. ${itemTotalPrice.toFixed(3)} </span></div>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 `;
@@ -79,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
                 itemsContainer.appendChild(itemElement);
 
-                // Add event listeners for the "Increment," and "Decrement" buttons
                 const name = itemData.name;
                 const price = itemData.price;
 
@@ -99,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     quantityInput.value = String(quantity + 1);
                 });
 
-                // Add event listener to the "Add to Cart" button
                 const addToCartButton = itemElement.querySelector(".add-to-cart");
                 addToCartButton.addEventListener("click", () => {
                     const quantityInput = document.getElementById(`quantity-${name}`);
@@ -112,4 +114,37 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         })
         .catch((error) => console.error("Error loading items:", error));
+
+    function displayFakeReceipt() {
+        // Cek apakah ada produk di keranjang
+        if (cartItems.length === 0) {
+            alert("Keranjang belanja kosong. Tambahkan produk terlebih dahulu.");
+            return;
+        }
+
+        // Membuat teks struk
+        const fakeReceiptContent = `
+            Struk Pembelian                                   cin's beauty
+            ------------------------------------------------------------------
+            ${cartItems.map((cartItem) => {
+                const itemTotalPrice = cartItem.price * cartItem.quantity;
+                return `
+                    ${cartItem.name}
+                    Rp. ${cartItem.price.toFixed(3)}    x ${cartItem.quantity}          = Rp. ${itemTotalPrice.toFixed(3)}
+                `;
+            }).join("")}
+            ------------------------------------------------------------------
+            Total Pembelian : Rp. ${cartTotal.toFixed(3)}
+            Pajak (11%): Rp. ${tax.textContent}
+            Total Bayar : Rp. ${subTotal.textContent}
+        `;
+
+        // Menampilkan struk di notifikasi
+        alert(fakeReceiptContent);
+    }
+
+    const printReceiptButton = document.getElementById("printReceiptButton");
+    printReceiptButton.addEventListener("click", () => {
+        displayFakeReceipt();
+    });
 });

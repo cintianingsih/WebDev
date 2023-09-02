@@ -2,31 +2,31 @@
     {
         "name": "Somethinc Ombrella-Crush",
         "price": 47.000,
-        "image": "ombrella-crush.jpg"
+        "image": "photos/ombrella-crush.jpg"
     },
     {
         "name": "Somethinc Ombrella-Wucu",
         "price": 47.000,
-        "image": "ombrella-wucu.jpg"
+        "image": "photos/ombrella-wucu.jpg"
     },
     {
         "name": "Somethinc Air Blush-Flamingo",
         "price": 53.000,
-        "image": "airyblush-flamingo.jpg"
+        "image": "photos/airyblush-flamingo.jpg"
     },
     {
         "name": "Somethinc Air Blush-Moisella",
         "price": 53.000,
-        "image": "airyblush-moiselle.jpg"
+        "image": "photos/airyblush-moiselle.jpg"
     },
     {
         "name": "Somethinc Hooman Cushion-Bijoux",
         "price": 151.000,
-        "image": "hoomancushion-bijoux.jpg"
+        "image": "photos/hoomancushion-bijoux.jpg"
     },
     {
         "name": "Somethinc Brow Emblem-Dark Chocolate",
         "price": 58.000,
-        "image": "brow-darkchoco.jpg"
+        "image": "photos/brow-darkchoco.jpg"
     }
 ]

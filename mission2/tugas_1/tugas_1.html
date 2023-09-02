@@ -12,7 +12,7 @@
     <nav class="navbar navbar-expand-lg navigasi">
         <div class="container-fluid">
             <a class="navbar-brand" href="tugas_1.html">
-                <img src="logo.png" width="150px" height="75px">
+                <img src="photos/logo.png" width="150px" height="75px">
             </a>
 
             <div class="navbar-nav ms-auto">
@@ -28,9 +28,12 @@
 
         <h2 style="border-top: 7px solid#874356;">My Cart</h2>
         <ul id="cart"></ul>
-        <p>Total: Rp. <span id="total">0.00</span></p>
-        <p>Tax (11%): Rp. <span id="tax">0.00</span></p>
-        <p>Subtotal: Rp. <span id="subTotal">0.00</span></p>
+        <div class="mycart" style="border-top: 3px solid#874356; padding-top: 20px;">
+            <p>Total Pembelian : Rp. <span id="total">0.00</span></p>
+            <p>Pajak 11% : Rp. <span id="tax">0.00</span></p>
+            <p>Total Bayar : Rp. <span id="subTotal">0.00</span></p>
+            <button class="cetakStruk" id="printReceiptButton">Cetak Struk</button>
+        </div>
     </div>
 
     <script src="products.js"></script> 
