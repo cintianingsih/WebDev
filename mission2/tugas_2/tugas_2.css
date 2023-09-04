@@ -33,24 +33,24 @@ body{
     animation: road 1s infinite linear;
 }
 
-#dino{
-    width: 50px;
+#gajah{
+    width: 60px;
     height: 50px;
     position: relative;
     top: 103px;
     left: 90px;
 }
 
-#cactus{
+#pohon{
     width: 50px;
-    height: 50px;
+    height: 60px;
     position: relative;
     top: 103px;
     left: 850px;
-    animation: cactus 1s infinite linear;
+    animation: pohon 1s infinite linear;
 }
 
-@keyframes cactus{
+@keyframes pohon{
     0%{
         left: 800px;
     }
